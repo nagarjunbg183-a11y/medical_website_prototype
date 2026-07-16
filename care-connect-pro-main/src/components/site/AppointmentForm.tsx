@@ -56,7 +56,7 @@ export function AppointmentForm() {
           <span className="text-xs font-bold uppercase tracking-widest text-brand mb-3 block">
             Book Appointment
           </span>
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-balance mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-balance mb-4">
             Reserve your visit in under a minute.
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
@@ -83,7 +83,7 @@ export function AppointmentForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
           onSubmit={handleSubmit(onSubmit)}
-          className="lg:col-span-3 bg-card rounded-3xl p-6 sm:p-8 border border-border shadow-[var(--shadow-soft)] grid sm:grid-cols-2 gap-4"
+          className="lg:col-span-3 bg-card rounded-3xl p-5 sm:p-8 border border-border shadow-[var(--shadow-soft)] grid sm:grid-cols-2 gap-4"
           noValidate
         >
           <Field label="Full Name" error={errors.name?.message}>

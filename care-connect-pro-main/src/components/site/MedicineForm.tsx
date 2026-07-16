@@ -234,7 +234,7 @@ export function MedicineForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="grid lg:grid-cols-3 gap-6" noValidate>
         {/* Left Column: Details, Search, Upload */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-card p-6 sm:p-8 rounded-3xl border border-border shadow-[var(--shadow-soft)] grid sm:grid-cols-2 gap-4">
+          <div className="bg-card p-5 sm:p-8 rounded-3xl border border-border shadow-[var(--shadow-soft)] grid sm:grid-cols-2 gap-4">
             <Field label="Patient Name" error={errors.name?.message}>
               <Input placeholder="Ravi Kumar" {...register("name")} />
             </Field>
@@ -318,7 +318,7 @@ export function MedicineForm() {
                     </div>
                   )}
                 </div>
-                <div className="flex gap-2">
+                <div className="flex w-full sm:w-auto gap-2">
                   <Input 
                     type="number" 
                     min={1} 
@@ -327,7 +327,7 @@ export function MedicineForm() {
                     onChange={(e) => setTempQty(parseInt(e.target.value) || 1)}
                     className="w-20"
                   />
-                  <Button type="button" onClick={handleAddItem} variant="secondary" className="gap-1 px-4">
+                  <Button type="button" onClick={handleAddItem} variant="secondary" className="gap-1 px-4 flex-1 sm:flex-none">
                     <Plus className="size-4" /> Add
                   </Button>
                 </div>
@@ -338,7 +338,7 @@ export function MedicineForm() {
           <div className="bg-card rounded-3xl border border-border shadow-[var(--shadow-soft)] overflow-hidden">
             <motion.label
               whileHover={{ backgroundColor: "var(--brand-soft)" }}
-              className="p-8 cursor-pointer flex flex-col justify-between transition-colors border-b border-border/50"
+              className="p-5 sm:p-8 cursor-pointer flex flex-col justify-between transition-colors border-b border-border/50"
             >
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -362,7 +362,7 @@ export function MedicineForm() {
               />
             </motion.label>
             
-            <div className="p-6 bg-background">
+            <div className="p-5 sm:p-6 bg-background">
               <Field label="Prescription Description / Notes" error={errors.description?.message}>
                 <Textarea 
                   placeholder="E.g. Please provide 2 strips of the first medicine in the prescription..."
@@ -375,7 +375,7 @@ export function MedicineForm() {
         </div>
 
         {/* Right Column: Selected Medicines Cart */}
-        <div className="bg-card p-6 rounded-3xl border border-border shadow-md flex flex-col min-h-[400px]">
+        <div className="bg-card p-5 sm:p-6 rounded-3xl border border-border shadow-md flex flex-col min-h-[400px]">
           <h3 className="text-xl font-semibold flex items-center gap-2 mb-1">
             <ShoppingBag className="size-5 text-brand" /> Your List
           </h3>

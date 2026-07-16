@@ -5,7 +5,7 @@ import heroImg from "@/assets/hero-clinic.jpg";
 
 export function Hero() {
   return (
-    <section id="home" className="relative pt-10 pb-20 sm:py-24 overflow-hidden">
+    <section id="home" className="relative pt-6 pb-14 sm:py-20 md:py-24 overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,var(--brand-soft)_0%,transparent_70%)]"
@@ -19,7 +19,7 @@ export function Hero() {
           <span className="inline-block py-1.5 px-3 bg-brand-soft text-brand-dark text-xs font-bold rounded-full mb-6 tracking-wider uppercase">
             Next-Gen Patient Care
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] tracking-tight text-balance mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] tracking-tight text-balance mb-5 sm:mb-6">
             Precision medicine{" "}
             <span className="text-brand">tailored to you.</span>
           </h1>
@@ -28,20 +28,20 @@ export function Hero() {
             to deliver a seamless healthcare experience — from diagnosis to
             recovery.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild size="lg" className="h-12 px-6 rounded-xl bg-ink text-background hover:bg-ink/90 hover:scale-105 transition-transform">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full sm:w-auto">
+            <Button asChild size="lg" className="w-full sm:w-auto h-12 px-6 rounded-xl bg-ink text-background hover:bg-ink/90 hover:scale-105 transition-transform">
               <a href="#appointment">
                 <Calendar className="size-4" />
                 Book Appointment
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 px-6 rounded-xl border-border hover:scale-105 transition-transform">
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto h-12 px-6 rounded-xl border-border hover:scale-105 transition-transform">
               <a href="#medicines">
                 <Pill className="size-4" />
                 Order Medicines
               </a>
             </Button>
-            <Button asChild size="lg" variant="destructive" className="h-12 px-6 rounded-xl relative overflow-hidden hover:scale-105 transition-transform">
+            <Button asChild size="lg" variant="destructive" className="w-full sm:w-auto h-12 px-6 rounded-xl relative overflow-hidden hover:scale-105 transition-transform">
               <a href="tel:911" aria-label="Emergency">
                 <span className="absolute inset-0 -z-10 bg-destructive animate-pulse opacity-60" />
                 <Phone className="size-4" />
@@ -57,7 +57,7 @@ export function Hero() {
               { n: "24/7", l: "Support" },
             ].map((s) => (
               <div key={s.l}>
-                <dt className="text-2xl sm:text-3xl font-bold text-ink">{s.n}</dt>
+                <dt className="text-xl sm:text-2xl md:text-3xl font-bold text-ink">{s.n}</dt>
                 <dd className="text-[11px] uppercase tracking-widest text-muted-foreground mt-1">
                   {s.l}
                 </dd>
@@ -96,7 +96,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-brand text-primary-foreground p-4 rounded-2xl shadow-xl max-w-[200px] hidden sm:block"
+            className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-brand text-primary-foreground p-3 sm:p-4 rounded-2xl shadow-xl max-w-[200px] hidden sm:block"
           >
             <div className="text-sm font-semibold">Accredited Since</div>
             <div className="text-2xl font-bold mt-1">1998</div>

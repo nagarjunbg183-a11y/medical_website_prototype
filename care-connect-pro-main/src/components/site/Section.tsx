@@ -20,7 +20,7 @@ export function Section({
   align?: "left" | "center";
 }) {
   return (
-    <section id={id} className={cn("py-20 sm:py-24 scroll-mt-24", className)}>
+    <section id={id} className={cn("py-12 sm:py-16 md:py-24 scroll-mt-24", className)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {(eyebrow || title || subtitle) && (
           <motion.div
@@ -36,7 +36,7 @@ export function Section({
               </span>
             )}
             {title && (
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-balance">
                 {title}
               </h2>
             )}
